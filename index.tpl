@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
+        <link rel="stylesheet" href="/views/super_lite/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
@@ -21,22 +22,6 @@
                 }
             }
         </script>
-        <style>
-            textarea {
-                width: 100%;
-            }
-            input {
-                width: 100%;
-            }
-            hr#last {
-                margin-top: 30px;
-            }
-            div#toc {
-                border: 1px solid;
-                padding: 20px;
-                width: fit-content;
-            }
-        </style>
         {{!imp[1][5]}}
         {{!imp[2][3]}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,13 +37,15 @@
         </div>
         <br>
         <div id="tool">
-            % for sub_d in menu:
-                % if(sub_d[1] == 1):
-                    <a href="/{{sub_d[0]}}" id="open">토론</a>
-                % elif(sub_d[1] == 0):
-                    <a href="/{{sub_d[0]}}">토론</a>
-                % else:
-                    <a href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+            % if(menu != 0):
+                % for sub_d in menu:
+                    % if(sub_d[1] == 1):
+                        <a href="/{{sub_d[0]}}" id="open">토론</a>
+                    % elif(sub_d[1] == 0):
+                        <a href="/{{sub_d[0]}}">토론</a>
+                    % else:
+                        <a href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                    % end
                 % end
             % end
         </div>
