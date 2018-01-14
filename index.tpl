@@ -21,18 +21,36 @@
                 }
             }
         </script>
+        <style>
+            textarea {
+                width: 100%;
+            }
+            input {
+                width: 100%;
+            }
+            hr#last {
+                margin-top: 30px;
+            }
+            div#toc {
+                border: 1px solid;
+                padding: 20px;
+                width: fit-content;
+            }
+        </style>
         {{!imp[1][5]}}
         {{!imp[2][3]}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <ul id="top_tool">
-            <li><a href="/recent_changes"></a>최근 변경</li>
-            <li><a href="/recent_discuss"></a>최근 토론</li>
-            <li><a href="/random"></a>무작위</li>
-            <li><a href="/user">사용자</a></li>
-            <li><a href="/other">기타</a></li>
-        </ul>
+        <div id="top_tool">
+            <a href="/">{{!imp[1][4]}}</a>
+            <a href="/recent_changes">최근 변경</a>
+            <a href="/recent_discuss">최근 토론</a>
+            <a href="/random">무작위</a>
+            <a href="/user">사용자</a>
+            <a href="/other">기타</a>
+        </div>
+        <br>
         <div id="tool">
             % for sub_d in menu:
                 % if(sub_d[1] == 1):
