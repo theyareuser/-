@@ -1,7 +1,7 @@
 textarea { width: 100%; }
 input { width: 100%; }
 hr#last { margin-top: 30px; }
-div#toc { border: 1px solid; padding: 20px; width: fit-content; }
+div#toc { border: 1px solid; padding: 20px; width: fit-content; width: -moz-fit-content; }
 table { border-collapse: collapse; }
 td { border: 1px solid; padding: 5px; }
 a { text-decoration: none; }
