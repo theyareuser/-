@@ -29,6 +29,10 @@
             <a href="/other">기타</a>
         </div>
         <hr>
+         <form method="post" action="/search" id="searchform" role="search">
+            <input name="search" placeholder="검색">
+        </form>       
+        <hr>
         <div id="tool">
             % if(menu != 0):
                 % i = 0
