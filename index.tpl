@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/super_lite/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['[math]', '[/math]']]}});</script>
         <script> function folding(num) { var fol = document.getElementById('folding_' + num); if(fol.style.display == 'inline-block' || fol.style.display == 'block')
