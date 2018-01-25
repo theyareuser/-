@@ -9,7 +9,7 @@ a.not_thing { color: red; }
 a#inside, a.out_link, a#open { color: green; }
 a.out_link::before { background: green; color: white; content: "밖"; }
 input[type="checkbox"] { width: auto; }
-.popup { background: gainsboro; }
+.popup { position: fixed; bottom: 0; padding: 10px; left: 0; background: lightgray; width: 100%; }
 ul#list { padding: 10px; }
 td#toron_color_green { background: darkseagreen; }
 td#toron_color_blue { background: skyblue; }
