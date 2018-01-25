@@ -20,7 +20,14 @@
             <a href="/recent_changes">최근 변경</a> /
             <a href="/recent_discuss">최근 토론</a> /
             <a href="/random">무작위</a> /
-            <a href="/user">사용자</a> /
+            % if(imp[2][2] == 1):
+                <a href="/user">사용자 (로그인)</a>
+            % elif(imp[2][2] == 0):
+                <a href="/user">사용자</a>
+            % else:
+                <a href="/user">사용자 (알림)</a>
+            % end
+            /
             <a href="/other">기타</a>
         </div>
         <hr>
@@ -40,9 +47,9 @@
                         /
                     % end
                 % end
+                <hr>
             % end
         </div>
-        <hr>
         <div id="data">
             <h1 id="title">
                 {{imp[0]}}
