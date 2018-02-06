@@ -4,10 +4,6 @@
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/super_lite/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['[math]', '[/math]']]}});</script>
-        <script> function folding(num) { var fol = document.getElementById('folding_' + num); if(fol.style.display == 'inline-block' || fol.style.display == 'block')
-        { fol.style.display = 'none'; } else { if(num % 3 == 0) { fol.style.display = 'block'; } else { fol.style.display = 'inline-block'; } } }</script>
         {{!imp[1][5]}}
         {{!imp[2][3]}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
