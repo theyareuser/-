@@ -5,9 +5,9 @@ div#toc { border: 1px solid; padding: 20px; width: fit-content; width: -moz-fit-
 table { border-collapse: collapse; }
 td { border: 1px solid; padding: 5px; }
 a { text-decoration: none; }
-a.not_thing { color: red; }
-a#inside, a.out_link, a#open { color: green; }
-a.out_link::before { background: green; color: white; content: "밖"; }
+#not_thing { color: red; }
+#inside, #out_link, #open { color: green; }
+#out_link::before { background: green; color: white; content: "밖"; }
 input[type="checkbox"] { width: auto; }
 .popup { position: fixed; bottom: 0; padding: 10px; left: 0; background: lightgray; width: 100%; }
 ul#list { padding: 10px; }
