@@ -4,6 +4,11 @@
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/main_css/main.css">
+        <style>
+            @media (max-width: 768px) { table { min-width: 100%; } }
+            @media (min-width: 1024px) { body { width: 80%; margin: auto; padding: 10px; border: 1px solid; } }
+            @media (min-width: 1920px) { body { width: 60%; } }
+        </style>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
