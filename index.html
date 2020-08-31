@@ -3,31 +3,42 @@
     <head>
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
-        <link rel="stylesheet" href="/views/main_css/main.css">
+        {{imp[3][3]|safe}}
         <style>
             @media (max-width: 768px) { table { min-width: 100%; } }
             @media (min-width: 1024px) { body { width: 80%; margin: auto; padding: 10px; border: 1px solid; } }
             @media (min-width: 1920px) { body { width: 60%; } }
+            blockquote { background-image: none; }
         </style>
+        <script src="/views/sl_open/js/skin_set.js?ver=1"></script>
+        <script>main_load(); window.addEventListener('DOMContentLoaded', function() { skin_set(); });</script>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div id="top_tool">
-            <a href="/">{{imp[1][4]|safe}}</a> <span style="margin-left: 10px"></span>
-            <a href="/recent_changes">최근 변경</a> <span style="margin-left: 10px"></span>
-            <a href="/recent_discuss">최근 토론</a> <span style="margin-left: 10px"></span>
-            <a href="/random">무작위</a> <span style="margin-left: 10px"></span>
-            {% if imp[2][2] == 1 %}
-                <a href="/user">사용자 (로그인)</a>
-            {% elif imp[2][2] == 0 %}
-                <a href="/user">사용자</a>
-            {% else %}
-                <a href="/user">사용자 (알림)</a>
+            <a href="/">{{imp[1][4]|safe}}</a>
+            ·
+            <a href="/recent_changes">{{'recent_change'|load_lang}}</a>
+            ·
+            <a href="/recent_discuss">{{'recent_discussion'|load_lang}}</a>
+            ·
+            <a href="/random">{{'random'|load_lang}}</a>
+            ·
+            {% if imp[2][2] == 0 %}
+                <a href="/user">{{'login'|load_lang}}</a>
+            {% elif imp[2][2] == 1 %}
+                {% if imp[2][8] != '0' %}
+                    <a href="/user">{{imp[2][5]}} (A)</a>
+                {% else %}
+                    <a href="/user">{{imp[2][5]}}</a>
+                {% endif %}
             {% endif %}
-            <span style="margin-left: 10px"></span>
-            <a href="/other">기타</a>
+            ·
+            <a href="/other">{{'other'|load_lang}}</a>
+            ·
+            <a href="/skin_set">{{'skin_set'|load_lang}}</a>
         </div>
         <hr>
          <form method="post" action="/search" id="searchform" role="search">
@@ -37,8 +48,14 @@
         <div id="tool">
             {% if menu != 0 %}
                 {% for sub_d in menu %}
-                    <a href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
-                    <span style="margin-left: 10px"></span>
+                    {% if sub_d|length > 2 and sub_d[2] == 1 %}
+                        <a href="/{{sub_d[0]}}" id="topic_color">{{sub_d[1]}}</a>
+                    {% else %}
+                        <a href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                    {% endif %}
+                    {% if menu[loop.index] %}
+                        ·
+                    {% endif %}
                 {% endfor %}
                 <hr>
             {% endif %}
@@ -55,7 +72,7 @@
             <hr id="last">
             <p>{{imp[1][1]|safe}}</p>
             <div id="powered">
-                <a href="https://github.com/2DU/openNAMU">오픈나무</a>
+                <a href="https://github.com/2DU/openNAMU">openNAMU</a>
             </div>
     </body>
 </html>
