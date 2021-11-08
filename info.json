@@ -1,6 +1,6 @@
 {
     "name" : "SL_open",
-    "skin_ver" : "v1.0.3",
-    "require_ver" : "12",
+    "skin_ver" : "v1.0.4",
+    "require_ver" : "3500101",
     "info_link" : "https://raw.githubusercontent.com/openNAMU/openNAMU-Skin-SL_open/master/info.json"
 }
